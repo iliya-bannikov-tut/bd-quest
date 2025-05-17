@@ -1,0 +1,23 @@
+body.task4 {
+  background-color: rgb(148, 255, 148);
+
+  div.task4 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &__form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-grow: 1;
+    }
+
+    .task4__comments {
+      font-family: monospace;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

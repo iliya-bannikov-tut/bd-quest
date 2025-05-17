@@ -7,6 +7,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 800px;
+
+  margin: auto;
 }
 
 a {
@@ -19,13 +22,13 @@ a:hover {
 }
 
 body {
-  margin: auto;
   display: flex;
   justify-content: center;
-  padding-top: 100px;
   min-width: 320px;
-  min-height: 100vh;
-  max-width: 800px;
+  min-height: calc(100vh - 40px);
+  max-height: calc(100vh - 40px);
+  overflow: hidden;
+  padding: 20px;
 }
 
 h1 {
