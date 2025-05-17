@@ -39,7 +39,7 @@ export const App = () => {
     <>
       <img
         style={{
-          borderRadius: "9999",
+          borderRadius: "9999px",
           width: 50,
           height: 50,
           zIndex: 100,
