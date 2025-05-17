@@ -7,15 +7,15 @@ export const ChangeBackgroundColor = () => {
   useEffect(() => {
     document.body.classList.remove("main", "task1", "task2", "task3", "task4");
 
-    if (location.pathname === "/") {
+    if (location.pathname === "/main") {
       document.body.classList.add("main");
-    } else if (location.pathname === "/1") {
+    } else if (location.pathname === "/task1") {
       document.body.classList.add("task1");
-    } else if (location.pathname === "/2") {
+    } else if (location.pathname === "/task2") {
       document.body.classList.add("task2");
-    } else if (location.pathname === "/3") {
+    } else if (location.pathname === "/task3") {
       document.body.classList.add("task3");
-    } else if (location.pathname === "/4") {
+    } else if (location.pathname === "/task4") {
       document.body.classList.add("task4");
     }
   }, [location]);

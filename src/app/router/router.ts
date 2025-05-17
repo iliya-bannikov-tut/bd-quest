@@ -12,23 +12,23 @@ export const router = createBrowserRouter([
     Component: App,
     children: [
       {
-        path: "/",
+        path: "/main",
         Component: Main,
       },
       {
-        path: "/1",
+        path: "/task1",
         Component: Task1,
       },
       {
-        path: "/2",
+        path: "/task2",
         Component: Task2,
       },
       {
-        path: "/3",
+        path: "/task3",
         Component: Task3,
       },
       {
-        path: "/4",
+        path: "/task4",
         Component: Task4,
       },
     ],

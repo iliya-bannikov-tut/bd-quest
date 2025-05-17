@@ -6,6 +6,7 @@ div.task2 {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 700px;
 
   &__form {
     margin-top: 30px;
@@ -19,5 +20,11 @@ div.task2 {
     font-family: monospace;
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  div.task2 {
+    width: 100%;
   }
 }
