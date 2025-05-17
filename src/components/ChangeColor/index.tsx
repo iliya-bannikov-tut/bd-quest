@@ -7,7 +7,7 @@ export const ChangeBackgroundColor = () => {
   useEffect(() => {
     document.body.classList.remove("main", "task1", "task2", "task3", "task4");
 
-    if (location.pathname === "/main") {
+    if (location.pathname === "/") {
       document.body.classList.add("main");
     } else if (location.pathname === "/task1") {
       document.body.classList.add("task1");

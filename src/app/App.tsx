@@ -4,7 +4,7 @@ import { Tab, Tabs } from "@mui/material";
 import { useEffect, useState } from "react";
 import goida from "../assets/goida.png";
 
-type TabValue = "main" | "task1" | "task2" | "task3" | "task4";
+type TabValue = "" | "task1" | "task2" | "task3" | "task4";
 
 const throttle = (callback: (...args: any) => any, delay: number) => {
   let lastTime = 0;
@@ -18,7 +18,7 @@ const throttle = (callback: (...args: any) => any, delay: number) => {
 };
 
 export const App = () => {
-  const [currTab, setCurrTab] = useState<TabValue>("main");
+  const [currTab, setCurrTab] = useState<TabValue>("");
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
 
@@ -58,7 +58,7 @@ export const App = () => {
         textColor="secondary"
         indicatorColor="secondary"
       >
-        <Tab value="main" label="Сюда писать ответы" />
+        <Tab value="" label="Сюда писать ответы" />
         <Tab value="task1" label="Задача 1" />
         <Tab value="task2" label="Задача 2" />
         <Tab value="task3" label="Задача 3" />
