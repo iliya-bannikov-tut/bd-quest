@@ -96,10 +96,7 @@ export const Task2 = () => {
         <span>// TODO: ИЛЬЯ БЛЯТЬ ЗАШИФРУЙ ПАРОЛИ</span>
         <span>// TODO: И УДАЛИ КОММЕНТ ВЫШЕ</span>
         {attempts >= 3 && (
-          <span>
-            // TODO: КАК ХОРОШО ЧТО НИКТО НЕ ЗНАЕТ ПРО sql И ЕГО УЯЗВИМОСТИ В
-            ГОЛОМ ВИДЕ
-          </span>
+          <span>// TODO: CBIST ПОЧИСТИ УЖЕ ТАБЛИЦУ users (name, password)</span>
         )}
       </div>
     </div>

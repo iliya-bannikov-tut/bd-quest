@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import goida from "../assets/goida.png";
 
 type TabValue = "" | "task1" | "task2" | "task3" | "task4";
+const tabs = new Set(["task1", "task2", "task3", "task4", ""]);
 
 const throttle = (callback: (...args: any) => any, delay: number) => {
   let lastTime = 0;
@@ -18,7 +19,11 @@ const throttle = (callback: (...args: any) => any, delay: number) => {
 };
 
 export const App = () => {
-  const [currTab, setCurrTab] = useState<TabValue>("");
+  const location = window.location.pathname.split("/")[1];
+
+  const [currTab, setCurrTab] = useState<TabValue>(
+    tabs.has(location) ? (location as TabValue) : ""
+  );
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
 
