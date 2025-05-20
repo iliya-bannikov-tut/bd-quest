@@ -2,8 +2,8 @@ import { QueryClient } from "@tanstack/react-query";
 import axios from "axios";
 
 const API = {
-  HOST: "https://api.example.com",
-  API: "/api/v1",
+  HOST: "http://89.169.163.227",
+  API: "/api",
 };
 
 export const api = axios.create({

@@ -1,4 +1,5 @@
 import {
+  Alert,
   Button,
   Snackbar,
   styled,
@@ -11,7 +12,8 @@ import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { mainCheck } from "../../app/api/queries";
 import pic1 from "../../assets/pic1.jpg";
-
+import CheckIcon from "@mui/icons-material/Check";
+import video from "../../assets/video.gif";
 const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
   color: theme.palette.getContrastText(red[500]),
   backgroundColor: red[500],
@@ -22,6 +24,8 @@ const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
 
 export const Main = () => {
   const [isError, setIsError] = useState(false);
+  const [answer, setAnswer] = useState("");
+
   const [task1, setTask1] = useState("");
   const [task2, setTask2] = useState("");
   const [task3, setTask3] = useState("");
@@ -33,17 +37,19 @@ export const Main = () => {
 
   const handleSubmit = async () => {
     const data = await submit({
-      task1_answer: task1,
-      task2_answer: task2,
-      task3_answer: task3,
-      task4_answer: task4,
+      answer1: task1,
+      answer2: task2,
+      answer3: task3,
+      answer4: task4,
     });
 
-    if (data === "error") {
-      setIsError(true);
+    if (data === "Окак, он смог (ответ прямиком с бекенда)") {
+      setAnswer(data);
 
       return;
     }
+
+    setIsError(true);
   };
 
   return (
@@ -93,6 +99,17 @@ export const Main = () => {
         >
           Отправить
         </ColorButton>
+        {answer && (
+          <>
+            <Alert icon={<CheckIcon fontSize="inherit" />} severity="success">
+              ГООЙДА, он смог (The Speransky)
+            </Alert>
+            <Alert icon={<CheckIcon fontSize="inherit" />} severity="success">
+              {answer} (CBISTina)
+            </Alert>
+            <img src={video}></img> Omadetou (DDashi)
+          </>
+        )}
       </div>
       <img src={pic1} alt="" />
     </div>

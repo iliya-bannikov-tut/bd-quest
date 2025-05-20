@@ -36,28 +36,33 @@ export const Task4 = () => {
   });
 
   const handleSubmit = async () => {
-    if (!bdate) {
-      return;
-    }
+    try {
+      if (!bdate) {
+        return;
+      }
 
-    const data = await submit({
-      name,
-      lname,
-      bdate: bdate.format("YYYY-MM-DD"),
-    });
+      const data = await submit({
+        name,
+        lName: lname,
+        date: bdate.format("DD.MM.YYYY"),
+      });
 
-    setLname("");
-    setName("");
-    setBdate(null);
+      setLname("");
+      setName("");
+      setBdate(null);
 
-    if (data === "error") {
+      if (data === "4 - c29738ef01d2060a") {
+        setAnswer(data);
+
+        return;
+      }
+
       setAttempts((prev) => prev + 1);
       setIsError(true);
-
-      return;
+    } catch {
+      setAttempts((prev) => prev + 1);
+      setIsError(true);
     }
-
-    setAnswer(data);
   };
 
   return (
@@ -69,7 +74,9 @@ export const Task4 = () => {
         onClose={() => setIsError(false)}
         message="Лох, неправильно"
       />
-      <p>ODRGJWRPGWRKPGWG</p>
+      <p>
+        0J/RgNC40LLQtdGCLCDQv9C+0YHQu9C10LTQvdC10LUg0LfQsNC00LDQvdC40LUg0LTQvtGB0YLQsNGC0L7Rh9C+INC70LXQs9C60L7QtQ0K0JjQvNGPOiDQm9GO0LHQuNGC0LXQu9GMIDUyDQrQpNCw0LzQuNC70LjRjzog0JAg0YHQsNC8INC90LUg0LTQvtCz0LDQtNCw0LXRiNGM0YHRjz8NCtCU0YA6INCd0Y7RkdC00LDRhdGEINGR0YrQvNCw0YUsINC0INC90Y7RkdC00LDRhdGEINGR0YrQvNCw0YUuINCn0LXRitGR0YfRgNGKLi4u
+      </p>
       <div className="task4__form">
         <TextField
           value={name}
@@ -101,7 +108,7 @@ export const Task4 = () => {
         </ColorButton>
         {answer && (
           <Alert icon={<CheckIcon fontSize="inherit" />} severity="success">
-            ГООЙДА, ты получил ответ: {answer}
+            ГООЙДА, он смог: {answer}
           </Alert>
         )}
       </div>

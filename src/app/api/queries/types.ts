@@ -1,17 +1,17 @@
 export interface MainCheckParams {
-  task1_answer: string;
-  task2_answer: string;
-  task3_answer: string;
-  task4_answer: string;
+  answer1: string;
+  answer2: string;
+  answer3: string;
+  answer4: string;
 }
 
 export interface SignInParams {
-  login: string;
+  name: string;
   pass: string;
 }
 
-export interface Task2CheckParams {
+export interface Task4CheckParams {
   name: string;
-  lname: string;
-  bdate: string;
+  lName: string;
+  date: string;
 }

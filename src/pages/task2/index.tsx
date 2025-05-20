@@ -33,19 +33,24 @@ export const Task2 = () => {
   });
 
   const handleSubmit = async () => {
-    const data = await submit({ login, pass });
+    try {
+      const data = await submit({ name: login, pass });
 
-    setLogin("");
-    setPass("");
+      setLogin("");
+      setPass("");
 
-    if (data === "error") {
+      if (data === "ты смог войти в аккаунт. 2 - b3d74eea97bfb75c") {
+        setAnswer(data);
+
+        return;
+      }
+
       setAttempts((prev) => prev + 1);
       setIsError(true);
-
-      return;
+    } catch {
+      setAttempts((prev) => prev + 1);
+      setIsError(true);
     }
-
-    setAnswer(data);
   };
 
   return (
