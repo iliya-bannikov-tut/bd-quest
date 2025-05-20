@@ -2,7 +2,7 @@ import { QueryClient } from "@tanstack/react-query";
 import axios from "axios";
 
 const API = {
-  HOST: "http://89.169.163.227",
+  HOST: "https://89.169.163.227",
   API: "/api",
 };
 
