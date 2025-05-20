@@ -107,7 +107,10 @@ export const Main = () => {
             <Alert icon={<CheckIcon fontSize="inherit" />} severity="success">
               {answer} (CBISTina)
             </Alert>
-            <img src={video}></img> Omadetou (DDashi)
+            <Alert icon={<CheckIcon fontSize="inherit" />} severity="success">
+              Omadetou (DDashi)
+            </Alert>
+            <img src={video}></img>
           </>
         )}
       </div>
