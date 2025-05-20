@@ -9,7 +9,7 @@ export const Task1 = () => {
   useEffect(() => {
     if (ref.current && !countRef.current) {
       countRef.current = true;
-      ref.current.innerHTML = `<!-- comment -->${ref.current.innerHTML}`;
+      ref.current.innerHTML = `<!-- ответ: 1ca383cd1ee7f63a -->${ref.current.innerHTML}`;
     }
   }, []);
 
